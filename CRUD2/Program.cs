@@ -1,8 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using CRUD2.Data;
-using Rotativa;
-using Rotativa.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CRUD2Context>(options =>
@@ -32,7 +30,5 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-//Rotativa
-//RotativaConfiguration.Setup("exe/Rotativa");
 
 app.Run();
